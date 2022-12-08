@@ -20,7 +20,7 @@ void primeInRange(int L, int R) {
 int main() {
 
   int L = 1;
-  int R = 1000;
+  int R = 100;
   primeInRange(L, R);
   return 0;
 }
