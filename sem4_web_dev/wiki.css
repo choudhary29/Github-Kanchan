@@ -1,0 +1,10 @@
+p{
+    text-transform:capitalize;
+    letter-spacing: 2px;
+    padding: 50px;
+    text-align: center;
+    cursor: pointer;
+    background-color:rgba(255,255,0,\0.2);
+    color:rgba(255,0,0,1);
+    
+}

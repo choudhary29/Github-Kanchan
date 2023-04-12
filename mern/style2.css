@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: flex;
+    margin: 2px;
+    padding: 3px;
+
+}
+.h{
+    padding: 20px;
+    margin: -5px;
+    font-size: 40px;
+    background-color: orange;
+}
+.footer{
+    padding: 2px;
+    margin: 4px;
+    font-size: 20px;
+}
+#home{
+    background-color: rgb(116, 101, 82);
+}
+
+.body{
+    padding: 2px;
+    margin: 8px;
+}
+h:hover{
+    background-color: black;
+}

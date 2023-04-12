@@ -1,0 +1,66 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    background-color: orangered;
+}
+.loginPage{
+    height: 100px;
+    width: 500px;
+    padding-top: 40px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    background-color: purple;
+    border-radius: 15px;
+    margin: 10px;
+    float: right;
+}
+.hero{
+    font-size: 45px;
+    color: white;
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 20px;
+}
+.hero p{
+    margin-top: 50px; 
+    font-size: 20px;
+}
+.login{
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 180px;
+    height: 600px;
+    width: 500px;
+    margin: 180px 0px 0px 840px;
+    align-items: center;
+    
+}
+.input{
+    position: absolute;
+    background-color: white;
+    
+    border-radius: 10px;
+    margin: 10px 0px 0px 30px;
+    padding: 10px;
+    height: 50px;
+    width: 420px;
+}
+.kc{
+  position: absolute;
+  background-color: white;
+  margin: 10cm;
+}
