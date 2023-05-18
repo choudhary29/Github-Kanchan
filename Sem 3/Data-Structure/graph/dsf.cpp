@@ -22,25 +22,26 @@
 #include<vector>
 #include<queue>
 using namespace std;
-int DFS_Visit(int i,vector<int>Visited[],vector<int>AdjList[],int Elements){
+
+int DFS_Visit(int i,vector<int>Visited,vector<int>AdjList,int Elements){
     cout<<i;
     Visited[i]=1;
     Elements=Elements+1;
-    for(int j=0;j<AdjList[V].size(),Elements){
+    for(int j=0;j<AdjList.size();Elements){
         if(Visited[j]==0){
-            DFS_Visit(j,Visited[],AdjList[],Elements);
+            DFS_Visit(j,Visited,AdjList,Elements);
         }
     }
     return Elements;
 }
-void DFS(vector<int>AdjList[],int V){
+void DFS(vector<int>AdjList,int V){
     int count=0;
     vector<int>Visited(V);
     for(int i=0;i<V;i++){
         if(Visited[i]==0){
             count=count+1;
-            int Elements=0
-            DFS_Visit(i,Visited[],AdjList[],Elements);
+            int Elements=0;
+            DFS_Visit(i,Visited,AdjList,Elements);
         }
     }
 }
@@ -61,10 +62,10 @@ int main(){
     }
     for(int i=0;i<V;i++){
         cout<<i<<":";
-        for(int j=0;j<ADl[i].size();j++)
+        for(int j=0;j<AdjList[i].size();j++)
             cout<<AdjList[i][j];
         cout<<endl;
     }
-    DFS(AdjList,V);
+    DFS(AdjList[V],V);
     return 0;
 }
