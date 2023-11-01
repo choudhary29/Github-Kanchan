@@ -31,6 +31,6 @@ int main(){
     cout<<"enter the index for which you need address:";
     cin>>i;
     cout<<"by address:"<<&a[i]<<endl;
-    cout<<"bu formula:"<<(a+(i-lower_bound))<<endl;
+    cout<<"by formula:"<<(a+(i-lower_bound))<<endl;
     return 0;
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    class kanchan
+    {
+        constructor()
+        {
+            var bal;
+        }
+        setbal(a)
+        {
+            this.bal=a;
+        }
+        getbal()
+        {
+            return this.bal;
+        }
+        credit(a)
+        {
+            this.bal=this.bal+a;
+        }
+        debit(a)
+        {
+            if(a>this.bal)
+            {
+            alert("not enough balance");
+            }
+            else
+            {
+                this.bal-=a;
+                document.write("present balance="+this.bal);
+            }
+        }
+    }
+    var ob=new kanchan();
+    ob.setbal(1000);
+    document.write(ob.getbal()+"<br>");
+    ob.credit(10000);
+    ob.debit(500000);
+</script>
+<body>
+    
+</body>
+</html>

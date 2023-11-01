@@ -22,7 +22,7 @@
 #include<vector>
 #include<queue>
 using namespace std;
-
+int count=0;
 int DFS_Visit(int i,vector<int>Visited,vector<int>AdjList,int Elements){
     cout<<i;
     Visited[i]=1;
@@ -41,6 +41,7 @@ void DFS(vector<int>AdjList,int V){
         if(Visited[i]==0){
             count=count+1;
             int Elements=0;
+            count++;
             DFS_Visit(i,Visited,AdjList,Elements);
         }
     }
@@ -67,5 +68,13 @@ int main(){
         cout<<endl;
     }
     DFS(AdjList[V],V);
+    cout<<count<<endl;
     return 0;
 }
+// 5
+// 1 2
+// 2 3
+// 3 4
+// 4 2
+// 4 5
+// 5 1

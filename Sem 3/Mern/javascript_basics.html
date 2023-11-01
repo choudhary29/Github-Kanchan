@@ -1,0 +1,306 @@
+<!--        //inline comments
+            /*multiline 
+                comments*/              -->
+
+<!-- data types:     undefined,  null,   boolean,    string,   symbol,   number,     object -->
+
+
+<script>
+    console.log("hello world");
+    var myname="kanchan";  //var can be used throughout the program
+    myname=8;
+    
+    let ourname="choudhary"  ;   //let will only be used within the scope of where you declare that
+    
+    const pi=3.14   ;    //const is a variable that can never change
+
+
+    
+    var a=5;
+    var b=6;
+    var c="i am a ";
+    a=a+1;
+    b=b+3;
+    c=c+"string!";
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+
+
+    var sum=10+10;
+    console.log(sum);
+    var diff=10-10;
+    console.log(diff);
+    var mul=10*10;
+    console.log(mul);
+    var quotient=10/10;
+    console.log(quotient);
+    var remainder=11%3;
+    console.log(remainder);
+
+    var myStr="i am a \"double quoted \"string inside \"double quotes\"";   // here \ is an escape character which can be used in string
+    console.log(myStr);
+
+    var mystr='"my name is kanchan"';       // or you can use single quotes
+    console.log(mystr);
+
+    var mystr=`"hi i am kc"   'he he'`;         //if you want to use single quotes as a string you can use back quotes
+    console.log(mystr);
+
+    //  CODE      OUTPUT
+    //  \'        single quote
+    //  \"        double qoute
+    //  \\        backslash
+    //  \n        newline
+    //  \r        carriage return
+    //  \t        tab
+    //  \b        backspace
+    //  \f        form feed
+
+    var mystr="first line\n\t\\second line\nthird line";
+    console.log(mystr);
+
+    //concatenating the strings using plus operator
+    var mystr="i am first "+"i am second";
+    console.log(mystr);
+
+    //concatenating the strings using plus equal operator
+    var mystr="i come first ";
+    mystr+="i come second";
+    console.log(mystr);
+
+    //concatenating strings with variable
+    var myname="kc";
+    var mystr="my name is "+ myname + " and i am well";
+    console.log(mystr);
+
+    //finding length of the string
+    var len=0;
+    var mystr="kanchan choudhary";
+    len=mystr.length;
+    console.log(len);
+
+    //bracket notation to find first character in string
+    var index="";
+    var mystr="kanchan";
+    index=mystr[3];
+    console.log(index);
+
+    //bracket notation to find last character in string
+    var mystr="kanchan";
+    var last_index=mystr[mystr.length -1];
+    console.log(last_index);
+
+    //bracket notation to find nth last character in string
+    var mystr="kanchan";
+    var last_index=mystr[mystr.length -3];
+    console.log(last_index);
+
+    //strings are immutable
+    var mystr="jello world";
+    //mystr[0]="h";             //we can't edit a string like this
+    mystr="hello world";        //but we can do it like this
+    console.log(mystr);
+
+    //word blanks
+    function wordblanks(noun, adjective, verb, adverb){
+        var result="";
+        result+="the " + adjective + " " +noun+" "+verb+" to the store " + adverb;
+        return result;
+    }
+    console.log(wordblanks("dog","big" , "ran" , "quickly"));
+    console.log(wordblanks("bike","slow" , "flew" , "slowly"));
+
+    //store multiple values with arrays
+    var arr=["kc", 29];
+    console.log(arr);
+
+    //nested array or multidimensional array
+    var arr=[["universe", 29],["planet", 8]];
+    console.log(arr);
+
+    //access array data with indexes
+    var arr=[10,20,30];
+    var idx=arr[2];
+    console.log(idx);
+
+    //modify array data with indexes
+    var arr=[12,40,50,90];
+    arr[1]=20;
+    console.log(arr);
+
+    //access multidimensional arrays with indexes
+    var arr=[[1,2,3],[4,5,6],[[7,8,9],10,11]];
+    var idx=arr[2][0];
+    console.log(idx);
+
+    //manipulate array with push and pop
+    var arr=["hi","hello"];
+    arr.push("namaste",["wassup"]);
+    console.log(arr);
+
+    var arr=["hi","hello"];
+    var popi=arr.pop();
+    console.log(arr);
+    console.log(popi);
+
+    //manipulate array with shift
+    var arr=["stimpson","j",["cat"]];
+    var shifted_element=arr.shift();
+    console.log(arr);
+    console.log(shifted_element);
+
+    //manipulate array with unshift
+    var arr=["stimpson","j",["cat"]];
+    arr.unshift('hello');
+    console.log(arr);
+
+    //write reusable code with functions
+    function our_function(){
+        console.log("hiiiiiiiii");
+    }
+    our_function()
+    our_function()
+    our_function()
+    our_function()
+
+    function difference(a,b){
+        console.log(a-b);
+    }
+    difference(15,6)
+
+    //global scope and functions
+    //scope refers to the visibility of variables, variables which are defined outside the function blockhave global scope.
+    // Global scope means it can be seen everywhere in your javascript code
+    var myglobal=10;
+    function fun1(){
+        oopsglobal=5;
+    }
+
+    function fun2(){
+        var output="";
+        if(typeof myglobal!="undefined"){
+            output+="myglobal: "+myglobal;
+        }
+        if(typeof oopsglobal!="undefined"){
+            output+="oopsglobal: "+oopsglobal;
+        }
+        console.log(output);
+    }
+    fun1();
+    fun2();
+
+    //local scope and functions
+    function mylocalscope(){
+        var myvar=5;
+        console.log(myvar);
+    }
+    mylocalscope();
+    //console.log(myvar);
+
+    //global vs local scope in functions
+    var outerwear="t shirt";
+    function myoutfit(){
+        var outerwear="sweater";
+        return outerwear;
+    }
+    console.log(outerwear);
+    console.log(myoutfit());
+
+    //return a value from a function by return
+    function minusseven(num){
+        return num-7;
+    }
+    console.log(minusseven(10));
+
+    //understanding undefined value returned from a function
+    var sum=0;
+    function addthree(){
+        sum=sum+3;
+    }
+
+    //assignment with a return value
+    var changed=0;
+    function change(num){
+        return (num+5)/3;
+    }
+    changed=change(10);
+    console.log(changed);
+
+    //stand in line
+    //A queue is an abstract data structure where items are kept in order. 
+    //New items can be added to the back of the queue and all the items are taken from the front of the queue.
+    function nextInLine(arr,item){
+        arr.push(item);
+        return arr.shift();
+    }
+    var testArr=[1,2,3,4,5];
+    console.log("before: " + JSON.stringify(testArr));
+    console.log(nextInLine(testArr,6));
+    console.log("after: " + JSON.stringify(testArr));
+
+    //boolean values: there are only two values (true or false) 
+
+    function welcometobool(){
+        return true;
+    }
+
+
+    //use conditional logic with if statements
+    function trueOrFalse(isItTrue){
+        if(isItTrue){
+            return "yes it is true";
+        }
+        return "no it is false";
+    }
+    console.log(trueOrFalse(true));
+
+    //strictly equal operator    
+    var val =10;
+    if(val==='10'){
+        console.log(val);
+    }
+    if(val=='10'){
+        console.log(val);
+    }
+
+    //golf game
+    var golfname=["Hole in one!","Eagle","Birdie","Par","Bogey","Double bogey","GoHome"];
+    function golfScore(par,stroke){
+        if(stroke==1){
+            return golfname[0]
+            //return "hole in one"
+        }
+        else if(stroke<=par-2){
+            //return golfname[1]
+            return "eagle"
+        }
+        else if(stroke==par-1){
+            //return golfname[2]
+            return "birdie"
+        }
+        else if(stroke==par){
+            //return golfname[3]
+            return "par"
+        }
+        else if(stroke==par+1){
+            //return golfname[4]
+            return "bogey"
+        }
+        else if(stroke==par+2){
+            //return golfname[5]
+            return "double bogey"
+        }
+        else if(stroke>=par+3){
+            //return golfname[6]
+            return "gohome"
+        }
+    }
+    console.log(golfScore(1,1));
+
+    
+    
+
+</script>
+
