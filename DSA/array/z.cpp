@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    cout<<15/7;
+    cout<<120/25;
     return 0;
 }
 
